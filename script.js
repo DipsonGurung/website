@@ -1,11 +1,17 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+const hamburger = document.getElementById('hamburger');
+const menu = document.querySelector('.menu');
 
-  alert(`Thank you for contacting us, ${name}! We'll get back to you at ${email}.`);
-  
-  // Clear the form
-  document.getElementById('contactForm').reset();
+hamburger.addEventListener('click', function () {
+    const hamIcon = this.querySelector('.hamburger-icon');
+    const crossIcon = this.querySelector('.cross-icon');
+    if (hamIcon.style.display === "none") {
+        hamIcon.style.display = "inline-block"
+        menu.style.display = "none"
+        crossIcon.style.display = "none"
+    }
+    else {
+        crossIcon.style.display = "inline-block"
+        hamIcon.style.display = "none"
+        menu.style.display = "block"
+    }
 });
