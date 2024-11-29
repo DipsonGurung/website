@@ -1,1 +1,1 @@
-copied form geeksfrogeeks
+copied from geeksfrogeeks
